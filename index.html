@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media only screen and (min-width: 600px) {
+            #main-doc {
+                flex-direction: row
+            }
+
+            #navbar {
+                width: 280px;
+                height: 100vh;
+                background-color: whitesmoke;
+                margin-top: 0;
+                text-align: left;
+                position: fixed;
+                padding: 0;
+            }
+
+            .divider {
+                width: 100%;
+                margin: 0;
+                min-height: 100px;
+                background-color: rgb(37, 37, 37);
+            }
+
+            #navbar header,
+            #navbar ul {
+                padding-left: 40px;
+            }
+
+            #navbar header {
+                color: whitesmoke;
+                padding-left: 40px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: rgb(37, 37, 37);
+            }
+
+            #navbar ul li {
+                padding-top: 15px;
+            }
+
+            .content {
+                margin-left: 350px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main id="main-doc">
+        <nav id="navbar">
+            <div class="divider"></div>
+            <header>Main header</header>
+            <ul>
+                <li><a class="nav-link" href="#What_is_OOPS?">What is OOPS?</a></li>
+                <li><a class="nav-link" href="#Encapsulation">Encapsulation</a></li>
+                <li><a class="nav-link" href="#Abstraction">Abstraction</a></li>
+                <li><a class="nav-link" href="#Inheritance">Inheritance</a></li>
+                <li><a class="nav-link" href="#Polymorphism">Polymorphism</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <section id="What_is_OOPS?" class="main-section">
+                <header>What is OOPS?</header>
+                <p>
+                    <code>Object-oriented programming (OOPS)</code> <br>
+                    Object-oriented programming combines a group of data attributes with functions or methods into a
+                    unit called an "object." Typically, OOP languages are class-based, which means that a class defines
+                    the data attributes and functions as a blueprint for creating objects, which are instances of the
+                    class. Popular class-based OOP languages include Java, Python, and C++. Multiple independent objects
+                    may be instantiated—or represented—from the same class and interact with each other in complex
+                    ways.<br>
+                    A simple example would be a class representing a person. The person class would contain attributes
+                    to
+                    represent information such as the person’s age, name, height, etc. The class definition might also
+                    contain
+                    functions such as "sayMyName" which would simply print that person’s name to the screen.
+                </p>
+                <p>
+                    A family could be constructed by instantiating person objects from the class for each member of the
+                    family.
+                    Each person object would contain different data attributes since each person is unique.<br>
+
+                    This programming style is pervasive in popular programming languages such as Java, C++, Python,
+                    JavaScript
+                    and C# among others. By defining sets of classes that represent and encapsulate objects in a
+                    program, the classes
+                    can be organized into modules, improving the structure and organization of software programs. Thus,
+                    developers
+                    often use OOP as a tool when they need to create complex programs since they are easier to reason in
+                    terms of
+                    classes and their relationships.
+                </p>
+                <ul>
+                    <li>The four basics of object-oriented programming:</li>
+                    <li>Encapsulation</li>
+                    <li>Abstraction</li>
+                    <li>Inheritance</li>
+                    <li>Polymorphism</li>
+                </ul>
+
+            </section>
+            <section id="Encapsulation" class="main-section">
+                <header>Encapsulation</header>
+                <p>
+                    <code>The word, “encapsulate,” means to enclose something. Just like a pill "encapsulates" or contains 
+                        the medication inside of its coating, the principle of encapsulation works in a similar way in OOP: 
+                        by forming a protective barrier around the information contained within a class from the rest of 
+                        the code.</code> <br>
+                    In OOP, we encapsulate by binding the data and functions which operate on that data into a single
+                    unit,
+                    the class. By doing so, we can hide private details of a class from the outside world and only
+                    expose
+                    functionality that is important for interfacing with it. When a class does not allow calling code
+                    access
+                    to its private data directly, we say that it is well encapsulated.
+                </p>
+                <p>
+                    Example: Elaborating on the person class example from earlier, we might have private data in the
+                    class, such
+                    as "socialSecurityNumber," that should not be exposed to other objects in the program. By
+                    encapsulating this
+                    data member as a private variable in the class, outside code would not have direct access to it, and
+                    it would
+                    remain safe within that person’s object. <br>
+
+                    If a method is written in the person class to perform, say, a bank transaction called
+                    "bankTransaction(),"
+                    that function could then access the "socialSecurityNumber" variable as necessary. The person’s
+                    private data
+                    would be well encapsulated in such a class.
+                </p>
+            </section>
+            <section id="Abstraction" class="main-section">
+                <header>Abstraction</header>
+                <p>
+                    <code>Often, it’s easier to reason and design a program when you can separate the interface of a class from 
+                        its implementation, and focus on the interface. This is akin to treating a system as a “black box,” where 
+                        it’s not important to understand the gory inner workings in order to reap the benefits of using it.</code>
+                    This process is called “abstraction” in OOP, because we are abstracting away the gory implementation
+                    details
+                    of a class and only presenting a clean and easy-to-use interface via the class’ member functions.
+                    Carefully
+                    used, abstraction helps isolate the impact of changes made to the code, so that if something goes
+                    wrong,
+                    the change will only affect the implementation details of a class and not the outside code.
+                </p>
+                <p>
+                    Example: Think of a stereo system as an object with a complex logic board on the inside. It has
+                    buttons on the
+                    outside to allow for interaction with the object. When you press any of the buttons, you're not
+                    thinking about what
+                    happens on the inside because you can't see it. Even though you can't see the logic board completing
+                    these functions
+                    as a result of pressing a button, it's still performing them., albeit hidden to you. <br>
+
+                    This is the concept of abstraction, which is incredibly useful in all areas of engineering and also
+                    applied to great
+                    effect in object-oriented programming.
+                </p>
+            </section>
+            <section id="Inheritance" class="main-section">
+                <header>Inheritance</header>
+                <p>
+                    <code>Object-oriented languages that support classes almost always support the notion of “inheritance.” Classes can 
+                        be organized into hierarchies, where a class might have one or more parent or child classes. If a class has
+                         a parent class, we say it is derived or inherited from the parent class and it represents an “IS-A” type relationship.
+                          That is to say, the child class “IS-A” type of the parent class.</code>
+                    Therefore, if a class inherits from another class, it automatically obtains a lot of the same
+                    functionality and
+                    properties from that class and can be extended to contain separate code and data. A nice feature of
+                    inheritance is
+                    that it often leads to good code reuse since a parent class’ functions don’t need to be re-defined
+                    in any of its child
+                    classes. <br>
+
+                    Consider two classes: one being the superclass—or parent—and the other being the subclass—or child.
+                    The child class
+                    will inherit the properties of the parent class, possibly modifying or extending its behavior.
+                    Programmers applying the
+                    technique of inheritance arrange these classes into what is called an “IS-A” type of relationship.
+                </p>
+                <p>
+                    Example: For instance, in the animal world, an insect could be represented by an Insect superclass.
+                    All insects share
+                    similar properties, such as having six legs and an exoskeleton. Subclasses might be defined for
+                    grasshoppers and ants.
+                    Because they inherit or are derived from the Insect class, they automatically share all insect
+                    properties.
+                </p>
+            </section>
+            <section id="Polymorphism" class="main-section">
+                <header>Polymorphism</header>
+                <p>
+                    <code>In OOP, polymorphism allows for the uniform treatment of classes in a hierarchy. Therefore, calling code 
+                        only needs to be written to handle objects from the root of the hierarchy, and any object instantiated by any 
+                        child class in the hierarchy will be handled in the same way.</code>
+                    Because derived objects share the same interface as their parents, the calling code can call any
+                    function in that
+                    class’ interface. At run-time, the appropriate function will be called depending on the type of
+                    object passed
+                    leading to possibly different behaviors.
+                </p>
+
+                <p>
+                    Example: Suppose we have a class called, “Animal” and two child classes, “Cat,” and “Dog.” If the
+                    Animal class has
+                    a method to make a noise, called, “makeNoise,” then, we can override the "makeNoise" function that
+                    is inherited by
+                    the sub-classes, "Cat" and "Dog," to be “meow” and “bark,” respectively. Another function can, then,
+                    be written that
+                    accepts any Animal object as a parameter and invokes its "makeNoise" member function. The noise will
+                    be different:
+                    either a “meow” or a “bark” depending on the type of animal object that was actually passed to the
+                    function.
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
